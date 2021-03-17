@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/gasahil/PractIceProjects/test/LinkList/main.cpp
+iostream
+-
+thread
+-
+mutex
+-
+condition_variable
+-
+
