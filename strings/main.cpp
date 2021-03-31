@@ -2,6 +2,8 @@
 #include "string"
 #include "vector"
 #include <algorithm> 
+#include <bits/stdc++.h>
+#include <memory>
 
 
 using namespace std;
@@ -10,6 +12,20 @@ void rev(std::string &str)
 {
     reverse(str.begin(), str.end()); 
 
+}
+
+
+// 123456789
+std::vector<string> splitSTring(std::string str, int length)
+{
+int size = str.size();
+std::vector<string> ret;
+for(int i = 0; i<size; i+=length)
+{
+if(i>size)i=size;
+ret.push_back(str.substr(i,length));
+}
+return ret;
 }
 
 
@@ -114,17 +130,15 @@ reverse(itrFirst,itr);
 reverse(s.begin(),s.end());
 cout << s << endl;
 }
-
+class A
+{
+public:
+A(){std::cout<<"A () "<<std::endl;}
+~A(){std::cout<<"~A () "<<std::endl;}
+};
 
 int main()
 {
-/*
-vector<int> str = {2,3,5,6,7,9};
-auto itr1 = str.begin()+2;
-cout<< " hi " << *itr1 << endl;
-itr1 = itr1 + 2;
-//advance(itr1,2);
-cout<< " hi " << *itr1 << endl;*/
 
 string stri = "Gaurav";
 auto itr = stri.begin()+2;
@@ -135,7 +149,6 @@ cout << "Check Palindrome = " << chckIfPalindrome("ABA") <<endl;
 cout << " Subsequence = " << chksub("geeksforgeeks" , "ro") << endl;
 cout << " if Annagram " << checkifangram("aaabbbbbbb","ababbbbabb") << endl;
 reveTheSentence("Hi I am Gaurav ");
-int arr[256]= {-1};
-cout<< arr[222] << endl;
+
 
 }
